@@ -1,8 +1,9 @@
 //
 //  main.cpp
-//  PolynomialCalculator
+//  busGraph
 //
-//  Created by Diego, Rodrigo & Pablo.
+//  Created by diegomaye on 7/16/19.
+//  Copyright © 2019 Diego Rodrigo Pablo. All rights reserved.
 //
 
 #include <stdio.h>
@@ -25,5 +26,5 @@ int main() {
     printf("para mas informacion sobre los comandos.\n");
     printf("\n");
     printf("///////////////////////////////////////////////////////////\n");
-
+    
 }
