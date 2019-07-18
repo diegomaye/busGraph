@@ -11,7 +11,7 @@
 #define LPPFParadas_h
 
 #include <stdio.h>
-#include "LPPFParadas.h"
+#include "Parada.h"
 
 typedef struct nodo_parada {
     Parada parada;
@@ -21,6 +21,6 @@ typedef struct nodo_parada {
 typedef struct  {
     NodoParada * primerParada;
     NodoParada * ultimaParada;
-} Paradas;
+} LPPFParadas;
 
 #endif /* LPPFParadas_h */

@@ -10,10 +10,10 @@
 #define Linea_h
 
 #include <stdio.h>
-#include "Paradas.h"
+#include "LPPFParadas.h"
 
 typedef struct{
-    Paradas paradas;
+    LPPFParadas paradas;
     int codigoLinea;
     int codigoOrigen;
     int codigoDestino;
