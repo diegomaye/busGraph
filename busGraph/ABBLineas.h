@@ -1,13 +1,14 @@
 //
-//  Lineas.hpp
+//  ABBLineas.h
 //  busGraph
 //
 //  Created by diegomaye on 7/17/19.
 //  Copyright © 2019 Diego Rodrigo Pablo. All rights reserved.
+//  Tipo Arbol Binario de Busqueda
 //
 
-#ifndef Lineas_h
-#define Lineas_h
+#ifndef ABBLineas_h
+#define ABBLineas_h
 
 #include <stdio.h>
 
@@ -16,6 +17,6 @@ struct nodo{
     struct nodo *izq, *der;
 };
 
-typedef struct nodo *Lineas;
+typedef struct nodo * ABBLineas;
 
-#endif /* Lineas_h */
+#endif /* ABBLineas_h */

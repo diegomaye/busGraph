@@ -1,17 +1,18 @@
 //
-//  Ciudades.hpp
+//  HashCiudades.hpp
 //  busGraph
 //
 //  Created by diegomaye on 7/17/19.
 //  Copyright © 2019 Diego Rodrigo Pablo. All rights reserved.
+//  Hash
 //
 
-#ifndef Ciudades_h
-#define Ciudades_h
+#ifndef HashCiudades_h
+#define HashCiudades_h
 
 #include <stdio.h>
 #include "Ciudad.h"
-#include "Recorridos.h"
+#include "GrafoRecorridos.h"
 
 typedef struct nodoL{
     Ciudad info;
@@ -20,6 +21,6 @@ typedef struct nodoL{
 
 typedef nodo* lista;
 
-typedef lista Ciudades[CANT_CIUDADES];
+typedef lista HashCiudades[CANT_CIUDADES];
 
-#endif /* Ciudades_h */
+#endif /* HashCiudades_h */

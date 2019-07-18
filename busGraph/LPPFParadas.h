@@ -1,16 +1,17 @@
 //
-//  Paradas.hpp
+//  LPPFParadas.hpp
 //  busGraph
 //
 //  Created by diegomaye on 7/17/19.
 //  Copyright © 2019 Diego Rodrigo Pablo. All rights reserved.
+//  (Secuenca) LPPF - Lista con Puntero al Principio y al Final
 //
 
-#ifndef Paradas_h
-#define Paradas_h
+#ifndef LPPFParadas_h
+#define LPPFParadas_h
 
 #include <stdio.h>
-#include "Parada.h"
+#include "LPPFParadas.h"
 
 typedef struct nodo_parada {
     Parada parada;
@@ -22,4 +23,4 @@ typedef struct  {
     NodoParada * ultimaParada;
 } Paradas;
 
-#endif /* Paradas_h */
+#endif /* LPPFParadas_h */
