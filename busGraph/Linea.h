@@ -11,8 +11,10 @@
 
 #include <stdio.h>
 #include "Paradas.h"
+
 typedef struct{
     Paradas paradas;
+    int codigoLinea;
     int codigoOrigen;
     int codigoDestino;
 } Linea;
