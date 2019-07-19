@@ -8,3 +8,6 @@
 //
 
 #include "GrafoRecorridos.h"
+
+void crearGrafoRecorridos(GrafoRecorridos &grafoRecorridos){
+}

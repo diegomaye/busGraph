@@ -8,3 +8,7 @@
 //
 
 #include "ABBLineas.h"
+
+void crearABBLineas(ABBLineas &arbolLineas){
+    arbolLineas = NULL;
+}

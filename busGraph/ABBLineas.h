@@ -12,11 +12,14 @@
 
 #include <stdio.h>
 
-struct nodo{
+typedef struct nodo_linea{
     int nro;
-    struct nodo *izq, *der;
-};
+    nodo_linea * hizq;
+    nodo_linea * hder;
+} NodoLinea;
 
-typedef struct nodo * ABBLineas;
+typedef NodoLinea * ABBLineas;
+
+void crearABBLineas(ABBLineas &arbolLineas);
 
 #endif /* ABBLineas_h */

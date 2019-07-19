@@ -7,24 +7,80 @@
 //
 
 #include <stdio.h>
+#include "Menu.h"
 
 int main() {
+    int opcion = NINGUNA;
+    
+    GrafoRecorridos grafoRecorridos;
+    crearGrafoRecorridos(grafoRecorridos);
+    ABBLineas arbolLineas;
+    crearABBLineas(arbolLineas);
+    Boolean salirSistema = FALSE;
     printf("///////////////////////////////////////////////////////////\n");
-    printf("      ____        __                            _       __\n");
-    printf("     / __ \\____  / __  ______  ____  ____ ___  (_____ _/ /\n");
-    printf("    / /_/ / __ \\/ / / / / __ \\/ __ \\/ __ `__ \\/ / __ `/ /\n");
-    printf("   / ____/ /_/ / / /_/ / / / / /_/ / / / / / / / /_/ / /\n");
-    printf("  /_/    \\____/_/\\__, /_/ /_/\\____/_/ /_/ /_/_/\\__,_/_/\n");
-    printf("     ______     /____/        __      __\n");
-    printf("    / ________ _/ _______  __/ ____ _/ /_____  _____\n");
-    printf("   / /   / __ `/ / ___/ / / / / __ `/ __/ __ \\/ ___/\n");
-    printf("  / /___/ /_/ / / /__/ /_/ / / /_/ / /_/ /_/ / /\n");
-    printf("  \\____/\\__,_/_/\\___/\\__,_/_/\\__,_/\\__/\\____/_/\n");
-    printf("\n");
-    printf("    Bienvenido a Polynomial Calculator, el sitema permite crear\n");
-    printf("sumar, multiplicar, evaluar y guardar polinomios, ingrese 'ayuda'\n");
-    printf("para mas informacion sobre los comandos.\n");
+    printf("Bienvenido a busGraph, app para el manejo de lineas de transporte");
+    printf("urbano.");
     printf("\n");
     printf("///////////////////////////////////////////////////////////\n");
+    
+    while(opcion != OPCION_SALIDA){
+        switch (opcion) {
+            case REGISTRAR_CIUDADES:
+                printLinea();
+                printf("Ingrese codigo y nombre de ciudad\n");
+                printLinea();
+                cargarCiudad(grafoRecorridos);
+                opcion = NINGUNA;
+                printf("CIUDAD CARGADA CORRECTAMENTE\n");
+                printLinea();
+                break;
+            case REGISTRAR_RUTAS:
+                printLinea();
+                printf("Ingrese los codigos ciudad para agregar la ruta\n");
+                printLinea();
+                agregarRuta(grafoRecorridos);
+                opcion = NINGUNA;
+                printf("RUTA AGREGADA CORRECTAMENTE\n");
+                printLinea();
+                break;
+            case BUSCAR_RECORRIDOS:
+                printLinea();
+                printf("Ingrese los codigos ciudad para buscar recorrido\n");
+                printLinea();
+                buscarRecorrido(grafoRecorridos);
+                opcion = NINGUNA;
+                printLinea();
+                break;
+            case LISTAR_LINEAS:
+                printLinea();
+                printf("A continuacion se listan todas las lineas del sistema\n");
+                printLinea();
+                listarLineas(arbolLineas);
+                opcion = NINGUNA;
+                printf("LINEAS LISTADAS CORRECTAMENTE\n");
+                printLinea();
+                break;
+            case REGISTRAR_PARADA:
+                printLinea();
+                printf("Registro de Parada\n");
+                printLinea();
+                registrarParada(grafoRecorridos, arbolLineas);
+                opcion = NINGUNA;
+                printf("PARADA REGISTRADA CORRECTAMENTE\n");
+                printLinea();
+                break;
+            case LISTAR_PARADAS:
+                printLinea();
+                printf("Ingresar linea para listar sus paradas\n");
+                printLinea();
+                listarParadas(arbolLineas);
+                opcion = NINGUNA;
+                printLinea();
+                break;
+            default:
+                imprimirMenu(opcion);
+                break;
+        }
+    }
     
 }

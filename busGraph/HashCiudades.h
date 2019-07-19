@@ -12,7 +12,8 @@
 
 #include <stdio.h>
 #include "Ciudad.h"
-#include "GrafoRecorridos.h"
+
+const int CANT_CIUDADES = 50;
 
 typedef struct nodoL{
     Ciudad info;
