@@ -16,4 +16,7 @@ typedef struct{
     int numeroParada;
 } Parada;
 
+void cargarDatosParada(Parada &p);
+void mostrarDatosParada(Parada p);
+
 #endif /* Parada_h */

@@ -16,4 +16,7 @@ typedef struct{
     String nombre;
     int codigo;
 } Ciudad;
+
+void cargarDatosCiudad(Ciudad &c);
+void mostrarDatosCiudad(Ciudad c);
 #endif /* Ciudad_h */

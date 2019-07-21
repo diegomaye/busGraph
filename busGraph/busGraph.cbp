@@ -32,6 +32,28 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ABBLineas.cpp" />
+		<Unit filename="ABBLineas.h" />
+		<Unit filename="Boolean.cpp" />
+		<Unit filename="Boolean.h" />
+		<Unit filename="Ciudad.cpp" />
+		<Unit filename="Ciudad.h" />
+		<Unit filename="Error.cpp" />
+		<Unit filename="Error.h" />
+		<Unit filename="GrafoRecorridos.cpp" />
+		<Unit filename="GrafoRecorridos.h" />
+		<Unit filename="HashCiudades.cpp" />
+		<Unit filename="HashCiudades.h" />
+		<Unit filename="LPPFParadas.cpp" />
+		<Unit filename="LPPFParadas.h" />
+		<Unit filename="Linea.cpp" />
+		<Unit filename="Linea.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
+		<Unit filename="Parada.cpp" />
+		<Unit filename="Parada.h" />
+		<Unit filename="String.cpp" />
+		<Unit filename="String.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
