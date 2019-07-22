@@ -9,17 +9,17 @@
 
 #include "HashCiudades.h"
 
-void Make(HashCiudades &ciudades){
+void make(HashCiudades &ciudades){
     int i;
     for (i=0; i<CANT_CIUDADES; i++)
-        CrearLista(ciudades[i]);
+        crearLista(ciudades[i]);
 }
 
-void CrearLista(lista ciudad){
+void crearLista(lista ciudad){
     ciudad = NULL;
 }
 
-Boolean Member(HashCiudades ciudades, int clave) {
+Boolean member(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
     if(cubeta < CANT_CIUDADES){
         return TRUE;
@@ -29,25 +29,37 @@ Boolean Member(HashCiudades ciudades, int clave) {
     }
 }
 
-Ciudad Find(HashCiudades ciudades, int clave) {
+Ciudad find(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
     return ciudades[cubeta] -> info;
 }
 
-void Insert(HashCiudades &ciudades, Ciudad ciudad) {
-    int clave = DarCodigo(ciudad);
-    int cubeta = h(clave);
-    InsFront(ciudades[cubeta], ciudad);
+void insert(HashCiudades &ciudades, Ciudad ciudad) {
+    String nombre = DarNombre(ciudad);
+    int cubeta = h(nombre);
+    insFront(ciudades[cubeta], ciudad);
 }
 
-void InsFront(lista &L, Ciudad ciudad){
+void insFront(lista &L, Ciudad ciudad){
     lista aux = new nodo;
     aux -> info = ciudad;
     aux -> sig = L;
     L = aux;
 }
 
-int h(int clave){
-    return clave - 1;//El codigo de ciudad va a ser el indice del arreglo del hash mas uno por eso la resta
+int h(String clave){
+    int i, dispercion, length;
+    dispercion = 0;
+    length = strlar(clave);
+    for(i=0; i<length; i++){
+        dispercion += clave[i];
+        dispercion = dispercion % CANT_CIUDADES;
+    }
+    return dispercion;
 }
 
+void cargarDatosCiudadEnHash(HashCiudades &ciudades){
+    Ciudad ciudad;
+    cargarDatosCiudad(ciudad);
+    insert(ciudades, ciudad);
+}

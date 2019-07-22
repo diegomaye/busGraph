@@ -7,3 +7,13 @@
 //
 
 #include "Linea.h"
+
+void cargarDatosLinea(Linea &linea, String parada, int ciudad){
+    linea.codigoLinea = parada;
+    linea.codigoOrigen = ciudad;
+    linea.codigoDestino = ciudad;
+}
+
+void DarCodigo(Linea &linea, String nombre){
+    strcop(nombre, linea.codigoLinea);
+}

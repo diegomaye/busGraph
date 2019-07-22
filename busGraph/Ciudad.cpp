@@ -10,8 +10,10 @@
 
 void cargarDatosCiudad(Ciudad &c)
 {
+    printf("Nombre Ciudad:");
+    strcrear(c.nombre);
     scan(c.nombre);
-    printf("Ingrese el codigo de la ciudad: ");
+    printf("Codigo Ciudad:");
     scanf("%d",&c.codigo);
 }
 

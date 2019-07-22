@@ -15,8 +15,7 @@ void crearGrafoRecorridos(GrafoRecorridos &grafoRecorridos){
             grafoRecorridos[i][j]=0;
 }
 
-Boolean PerteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2)
-{
+Boolean perteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2){
     Boolean pertenece=FALSE;
     if(grafoRecorridos[vert1][vert2]==1)
         pertenece=TRUE;
@@ -25,14 +24,22 @@ Boolean PerteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2)
 }
 
 
-void InsertarArista(GrafoRecorridos &grafoRecorridos, int vert1,int vert2)
-{
+void insertarArista(GrafoRecorridos &grafoRecorridos, int vert1, int vert2){
     grafoRecorridos[vert1][vert2]=1;
         if (vert1 != vert2)
             grafoRecorridos[vert2][vert1]=1;
 }
 
-Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos)
-{
+Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos){
+    return TRUE;
+}
 
+void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos){
+    int origen;
+    int destino;
+    printf("Codigo ciudad origen:");
+    scanf("%d",&origen);
+    printf("Codigo ciudad destino:");
+    scanf("%d",&destino);
+    insertarArista(grafoRecorridos, origen, destino);
 }
