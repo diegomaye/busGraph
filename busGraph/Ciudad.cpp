@@ -22,7 +22,3 @@ void mostrarDatosCiudad(Ciudad c)
     printf("\nEl codigo de la ciudad es:%d",c.codigo);
 }
 
-int darCodigoCiudad(Ciudad c)
-{
-    return c.codigo;
-}
