@@ -21,3 +21,11 @@ void mostrarDatosCiudad(Ciudad c)
     print(c.nombre);
     printf("\nEl codigo de la ciudad es:%d",c.codigo);
 }
+
+int DarCodigo(Ciudad c){
+    return c.codigo;
+}
+
+String DarNombre(Ciudad c){
+    return c.nombre;
+}
