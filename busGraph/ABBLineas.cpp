@@ -8,13 +8,3 @@
 //
 
 #include "ABBLineas.h"
-
-void crearABBLineas(ABBLineas &arbolLineas){
-    arbolLineas = NULL;
-}
-
-
-void Listar(Lineas arbolLineas)
-{
-
-}

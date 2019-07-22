@@ -9,16 +9,17 @@
 
 #ifndef GrafoRecorridos_h
 #define GrafoRecorridos_h
-#include "HashCiudades.h"
 
 #include <stdio.h>
+#include "HashCiudades.h"
 
 typedef int GrafoRecorridos[CANT_CIUDADES][CANT_CIUDADES];
 
 void crearGrafoRecorridos(GrafoRecorridos &grafoRecorridos);
-Boolean PerteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2);
-void InsertarArista(GrafoRecorridos &grafoRecorridos, int vert1,int vert2);
+Boolean perteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2);
+void insertarArista(GrafoRecorridos &grafoRecorridos, int vert1,int vert2);
 Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos);
 
+void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos);
 
 #endif /* GrafoRecorridos_h */

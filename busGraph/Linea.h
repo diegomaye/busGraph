@@ -14,9 +14,13 @@
 
 typedef struct{
     LPPFParadas paradas;
-    int codigoLinea;
+    String codigoLinea;
     int codigoOrigen;
     int codigoDestino;
 } Linea;
+
+void cargarDatosLinea(Linea &linea, String parada, int ciudad);
+
+void DarCodigo(Linea &linea, String nombre);
 
 #endif /* Linea_h */

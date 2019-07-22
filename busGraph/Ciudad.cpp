@@ -10,8 +10,10 @@
 
 void cargarDatosCiudad(Ciudad &c)
 {
+    printf("Nombre Ciudad:");
+    strcrear(c.nombre);
     scan(c.nombre);
-    printf("Ingrese el codigo de la ciudad: ");
+    printf("Codigo Ciudad:");
     scanf("%d",&c.codigo);
 }
 
@@ -22,3 +24,13 @@ void mostrarDatosCiudad(Ciudad c)
     printf("\nEl codigo de la ciudad es:%d",c.codigo);
 }
 
+<<<<<<< HEAD
+=======
+int DarCodigo(Ciudad c){
+    return c.codigo;
+}
+
+String DarNombre(Ciudad c){
+    return c.nombre;
+}
+>>>>>>> de2bf106f40b78f3b24bbbcc58eedfa1cb77a977

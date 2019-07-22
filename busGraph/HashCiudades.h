@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include "Ciudad.h"
 
-const int CANT_CIUDADES = 50;
+const int CANT_CIUDADES = 20;
 
 typedef struct nodoL{
     Ciudad info;
@@ -24,14 +24,16 @@ typedef nodo* lista;
 
 typedef lista HashCiudades[CANT_CIUDADES];
 
-int H(HashCiudades Hash_Ciudades);
+void make(HashCiudades &ciudades);
+void crearLista(lista ciudades);
 
+Boolean member(HashCiudades ciudades,String nombreCiudad);
+void insert(HashCiudades &ciudades,Ciudad ciudad);
+void insFront(lista &lista, Ciudad ciudad);
+Ciudad find(HashCiudades ciudades, String nombreCiudad);
 
-///Primitivas
-void Make(HashCiudades &Hash_Ciudades);
-Boolean Member(HashCiudades Hash_Ciudades,String nombreCiudad);
-void Insert(HashCiudades &Hash_Ciudades,Ciudad c);
-Ciudad Find(HashCiudades Hash_Ciudades, String nombreCiudad);
+void cargarDatosCiudadEnHash(HashCiudades &ciudades);
 
+int h(String clave);
 
 #endif /* HashCiudades_h */

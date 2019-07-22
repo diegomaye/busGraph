@@ -13,10 +13,11 @@ int main() {
     int opcion = NINGUNA;
     
     GrafoRecorridos grafoRecorridos;
+    HashCiudades hashCiudades;
     crearGrafoRecorridos(grafoRecorridos);
+    make(hashCiudades);
     ABBLineas arbolLineas;
     crearABBLineas(arbolLineas);
-    Boolean salirSistema = FALSE;
     printf("///////////////////////////////////////////////////////////\n");
     printf("Bienvenido a busGraph, app para el manejo de lineas de transporte");
     printf("urbano.");
@@ -29,7 +30,7 @@ int main() {
                 printLinea();
                 printf("Ingrese codigo y nombre de ciudad\n");
                 printLinea();
-                cargarCiudad(grafoRecorridos);
+                cargarCiudad(hashCiudades);
                 opcion = NINGUNA;
                 printf("CIUDAD CARGADA CORRECTAMENTE\n");
                 printLinea();
@@ -49,6 +50,15 @@ int main() {
                 printLinea();
                 buscarRecorrido(grafoRecorridos);
                 opcion = NINGUNA;
+                printLinea();
+                break;
+            case REGISTRAR_LINEA:
+                printLinea();
+                printf("Ingrese los datos de la nueva linea\n");
+                printLinea();
+                agregarLinea(arbolLineas, hashCiudades);
+                opcion = NINGUNA;
+                printf("LINEA INGRESADA CORRECTAMENTE\n");
                 printLinea();
                 break;
             case LISTAR_LINEAS:
