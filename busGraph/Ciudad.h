@@ -19,4 +19,5 @@ typedef struct{
 
 void cargarDatosCiudad(Ciudad &c);
 void mostrarDatosCiudad(Ciudad c);
+int darCodigoCiudad(Ciudad c);
 #endif /* Ciudad_h */

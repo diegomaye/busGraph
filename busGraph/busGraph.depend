@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1563754609 source:c:\users\usuario\documents\github\busgraph\busgraph\graforecorridos.cpp
+	"GrafoRecorridos.h"
+
+1563754609 c:\users\usuario\documents\github\busgraph\busgraph\graforecorridos.h
+	"HashCiudades.h"
+	<stdio.h>
+
+1563752808 c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.h
+	<stdio.h>
+	"Ciudad.h"
+
+1563751088 c:\users\usuario\documents\github\busgraph\busgraph\ciudad.h
+	<stdio.h>
+	"String.h"
+
+1563477800 c:\users\usuario\documents\github\busgraph\busgraph\string.h
+	<stdio.h>
+	<stdlib.h>
+	"Boolean.h"
+
+1563477800 c:\users\usuario\documents\github\busgraph\busgraph\boolean.h
+	<stdio.h>
+

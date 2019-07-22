@@ -19,4 +19,5 @@ typedef struct{
 void cargarDatosParada(Parada &p);
 void mostrarDatosParada(Parada p);
 
+
 #endif /* Parada_h */

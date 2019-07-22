@@ -8,3 +8,21 @@
 //
 
 #include "HashCiudades.h"
+
+int H(HashCiudades Hash_Ciudades)
+{
+    int disp=0;
+    for(int i=0; i<CANT_CIUDADES; i++)
+    {
+
+    }
+
+
+}
+
+void Insert(HashCiudades &Hash_Ciudades,Ciudad c)
+{
+    int clave = darCodigoCiudad(c);
+    int cubeta = H(clave);
+    cargarDatosCiudad(H[cubeta],c);
+}

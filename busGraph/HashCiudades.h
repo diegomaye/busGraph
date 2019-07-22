@@ -24,4 +24,14 @@ typedef nodo* lista;
 
 typedef lista HashCiudades[CANT_CIUDADES];
 
+int H(HashCiudades Hash_Ciudades);
+
+
+///Primitivas
+void Make(HashCiudades &Hash_Ciudades);
+Boolean Member(HashCiudades Hash_Ciudades,String nombreCiudad);
+void Insert(HashCiudades &Hash_Ciudades,Ciudad c);
+Ciudad Find(HashCiudades Hash_Ciudades, String nombreCiudad);
+
+
 #endif /* HashCiudades_h */
