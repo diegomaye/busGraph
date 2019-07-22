@@ -50,3 +50,4 @@ void InsFront(lista &L, Ciudad ciudad){
 int h(int clave){
     return clave - 1;//El codigo de ciudad va a ser el indice del arreglo del hash mas uno por eso la resta
 }
+

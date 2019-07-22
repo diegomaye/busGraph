@@ -16,5 +16,9 @@
 typedef int GrafoRecorridos[CANT_CIUDADES][CANT_CIUDADES];
 
 void crearGrafoRecorridos(GrafoRecorridos &grafoRecorridos);
+Boolean PerteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2);
+void InsertarArista(GrafoRecorridos &grafoRecorridos, int vert1,int vert2);
+Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos);
+
 
 #endif /* GrafoRecorridos_h */

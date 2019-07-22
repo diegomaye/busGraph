@@ -22,5 +22,4 @@ void mostrarDatosCiudad(Ciudad c);
 
 int DarCodigo(Ciudad c);
 String DarNombre(Ciudad c);
-
 #endif /* Ciudad_h */
