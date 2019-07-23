@@ -9,26 +9,24 @@
 
 void imprimirMenu(int &opcion){
     printf("Elija lo que desea realizar\n");
-    printf("1. Registrar una Ciudad\n");
-    printf("2. Registrar una Ruta\n");
-    printf("3. Buscar recorrido entre ciudades\n");
-    printf("4. Registar Linea\n");
-    printf("5. Listar lineas\n");
-    printf("6. Registar Parada\n");
-    printf("7. Listar Paradas\n");
-    printf("8. Salir\n");
+    printf("1. Registrar una Ruta\n");
+    printf("2. Buscar recorrido entre ciudades\n");
+    printf("3. Registar Linea\n");
+    printf("4. Listar lineas\n");
+    printf("5. Registar Parada\n");
+    printf("6. Listar Paradas\n");
+    printf("7. Salir\n");
     printf("opcion: ");
     scanf("%d",&opcion);
 }
 
-void cargarCiudad(HashCiudades &hashCiudades){
+void cargarLasCiudades(HashCiudades &hashCiudades){
     for(int i=0; i<CANT_CIUDADES; i++)
-        cargarDatosCiudadEnHash(hashCiudades);
-
+        cargarDatosCiudadEnHash(hashCiudades, i);
 }
 
-void agregarRuta(GrafoRecorridos &grafoRecorridos){
-    cargarDatosAristaEnGrafo(grafoRecorridos);
+void agregarRuta(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades){
+    cargarDatosAristaEnGrafo(grafoRecorridos, ciudades);
 }
 
 void agregarLinea(ABBLineas &arbolLineas, HashCiudades ciudades){
@@ -41,7 +39,7 @@ void agregarLinea(ABBLineas &arbolLineas, HashCiudades ciudades){
     printf("Ingrese parada para la linea:");
     scan(nombreCiudad);
     if(member(ciudades, nombreCiudad)==TRUE){
-        Ciudad ciudad = Find(ciudades, nombreCiudad);
+        Ciudad ciudad = find(ciudades, nombreCiudad);
         cargarDatosArbolLineas(arbolLineas, parada, DarCodigo(ciudad));
     }
 

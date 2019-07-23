@@ -14,6 +14,6 @@ void cargarDatosLinea(Linea &linea, String parada, int ciudad){
     linea.codigoDestino = ciudad;
 }
 
-void DarCodigo(Linea &linea, String nombre){
+void DarCodigo(Linea linea, String &nombre){
     strcop(nombre, linea.codigoLinea);
 }

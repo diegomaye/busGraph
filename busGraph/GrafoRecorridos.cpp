@@ -34,9 +34,7 @@ Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos){
     return TRUE;
 }
 
-void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos){
-    int origenVertice;
-    int destinoVertice;
+void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades){
     String origen;
     String destino;
     printf("Nombre ciudad origen:");
@@ -45,9 +43,20 @@ void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos){
     printf("Nombre ciudad destino:");
     strcrear(destino);
     scan(destino);
-    int dispOrigen=h(origen);
-    origenVertice=dispOrigen;
-    int dispDestino=h(destino);
-    destinoVertice=dispDestino;
-    insertarArista(grafoRecorridos, origenVertice,destinoVertice);
+    if(member(ciudades, origen)){
+        Ciudad ciudadOrigen = find(ciudades, origen);
+        int codigoOrigen = DarCodigo(ciudadOrigen);
+        if(member(ciudades, destino)){
+            Ciudad ciudadDestino = find(ciudades, destino);
+            int codigoDestino = DarCodigo(ciudadDestino);
+            insertarArista(grafoRecorridos, codigoOrigen, codigoDestino);
+            printf("RUTA AGREGADA CORRECTAMENTE\n");
+        }
+        else{
+            printf("NOMBRE CIUDAD DESTINO NO ENCONTRADO\n");
+        }
+    }
+    else{
+        printf("NOMBRE CIUDAD ORIGEN NO ENCONTRADO\n");
+    }
 }

@@ -9,44 +9,68 @@
 
 #include "HashCiudades.h"
 
-///<<<<<<< HEAD
-///=======
 void make(HashCiudades &ciudades){
     int i;
     for (i=0; i<CANT_CIUDADES; i++)
         crearLista(ciudades[i]);
 }
 
-void crearLista(lista ciudad){
-    ciudad = NULL;
+void crearLista(lista ciudades){
+    ciudades = NULL;
 }
 
 Boolean member(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
-    if(cubeta < CANT_CIUDADES){
-        return TRUE;
-    }
-    else{
+    if(ciudades[cubeta] == NULL){
         return FALSE;
     }
+    else{
+        return perteneceLista(ciudades[cubeta], clave);
+    }
 }
 
-Ciudad Find(HashCiudades ciudades, String clave) {
+Boolean perteneceLista(lista cubeta, String clave){
+    Ciudad ciudad = cubeta -> info;
+    String claveCiudad = DarNombre(ciudad);
+    if(strreq(claveCiudad, clave)){
+        return TRUE;
+    }
+    else if(cubeta -> sig == NULL){
+        return FALSE;
+    }
+    else {
+        return perteneceLista(cubeta -> sig, clave);
+    }
+}
+
+/*PRECONDICION: La ciudad se enceuntra en el Hash (evaluar previamente con member)*/
+Ciudad find(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
-    return ciudades[cubeta] -> info;
+    return buscarLista(ciudades[cubeta], clave);
 }
 
-void Insert(HashCiudades &ciudades, Ciudad ciudad) {
+Ciudad buscarLista(lista cubeta, String clave){
+    Ciudad ciudad = cubeta -> info;
+    String claveCiudad = DarNombre(ciudad);
+    if(strreq(claveCiudad, clave)){
+        return ciudad;
+    }
+    else {
+        return buscarLista(cubeta -> sig, clave);
+    }
+}
+
+void insert(HashCiudades &ciudades, Ciudad ciudad) {
     String nombre = DarNombre(ciudad);
     int cubeta = h(nombre);
     insFront(ciudades[cubeta], ciudad);
 }
 
-void insFront(lista &L, Ciudad ciudad){
-    lista aux = new nodo;
+void insFront(lista &cubeta, Ciudad ciudad){
+    lista aux = new nodo();
     aux -> info = ciudad;
-    aux -> sig = L;
-    L = aux;
+    aux -> sig = cubeta;
+    cubeta = aux;
 }
 
 int h(String clave){
@@ -60,9 +84,8 @@ int h(String clave){
     return dispercion;
 }
 
-void cargarDatosCiudadEnHash(HashCiudades &ciudades){
+void cargarDatosCiudadEnHash(HashCiudades &ciudades, int indice){
     Ciudad ciudad;
-    cargarDatosCiudad(ciudad);
-    Insert(ciudades, ciudad);
+    cargarDatosCiudad(ciudad, indice);
+    insert(ciudades, ciudad);
 }
-///>>>>>>> de2bf106f40b78f3b24bbbcc58eedfa1cb77a977

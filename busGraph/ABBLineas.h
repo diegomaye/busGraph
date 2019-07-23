@@ -14,7 +14,7 @@
 #include "Linea.h"
 
 typedef struct nodo_linea{
-    Linea * info;
+    Linea info;
     nodo_linea * hizq;
     nodo_linea * hder;
 } NodoLinea;
@@ -26,7 +26,6 @@ void MakeABB(ABBLineas &arbolLineas);
 void insertABB(ABBLineas &arbolLineas, Linea linea);
 
 void ListarABB(ABBLineas arbolLineas);
-
 
 void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad);
 

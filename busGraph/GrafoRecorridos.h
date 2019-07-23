@@ -20,6 +20,6 @@ Boolean perteneceArista(GrafoRecorridos grafoRecorridos , int vert1, int vert2);
 void insertarArista(GrafoRecorridos &grafoRecorridos, int vert1,int vert2);
 Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos);
 
-void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos);
+void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades);
 
 #endif /* GrafoRecorridos_h */

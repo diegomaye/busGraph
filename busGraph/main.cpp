@@ -18,21 +18,21 @@ int main() {
     make(hashCiudades);
     ABBLineas arbolLineas;
     MakeABB(arbolLineas);
+    crearGrafoRecorridos(grafoRecorridos);
+    opcion = NINGUNA;
+    
     printf("///////////////////////////////////////////////////////////\n");
     printf("Bienvenido a busGraph, app para el manejo de lineas de transporte");
     printf("urbano.");
     printf("\n");
     printf("///////////////////////////////////////////////////////////\n");
-
     printLinea();
-                printf("Ingrese codigo y nombre de ciudad\n");
-                printLinea();
-                cargarCiudad(hashCiudades);
-                crearGrafoRecorridos(grafoRecorridos);
-
-                opcion = NINGUNA;
-                printf("CIUDADES CARGADAS CORRECTAMENTE\n");
-                printLinea();
+    printf("Ingrese codigo y nombre de ciudad\n");
+    printLinea();
+    cargarLasCiudades(hashCiudades);
+    printLinea();
+    printf("CIUDADES CARGADAS CORRECTAMENTE\n");
+    printLinea();
 
     while(opcion != OPCION_SALIDA){
 
@@ -41,9 +41,8 @@ int main() {
                 printLinea();
                 printf("Ingrese los codigos ciudad para agregar la ruta\n");
                 printLinea();
-                agregarRuta(grafoRecorridos);
+                agregarRuta(grafoRecorridos, hashCiudades);
                 opcion = NINGUNA;
-                printf("RUTA AGREGADA CORRECTAMENTE\n");
                 printLinea();
                 break;
             case BUSCAR_RECORRIDOS:

@@ -21,6 +21,6 @@ typedef struct{
 
 void cargarDatosLinea(Linea &linea, String parada, int ciudad);
 
-void DarCodigo(Linea &linea, String nombre);
+void DarCodigo(Linea linea, String &nombre);
 
 #endif /* Linea_h */

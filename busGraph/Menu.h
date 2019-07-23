@@ -15,21 +15,20 @@
 
 //Menu
 const int NINGUNA = -1;
-const int REGISTRAR_CIUDADES = 1;
-const int REGISTRAR_RUTAS = 2;
-const int BUSCAR_RECORRIDOS = 3;
-const int REGISTRAR_LINEA = 4;
-const int LISTAR_LINEAS = 5;
-const int REGISTRAR_PARADA = 6;
-const int LISTAR_PARADAS = 7;
-const int OPCION_SALIDA = 8;
+const int REGISTRAR_RUTAS = 1;
+const int BUSCAR_RECORRIDOS = 2;
+const int REGISTRAR_LINEA = 3;
+const int LISTAR_LINEAS = 4;
+const int REGISTRAR_PARADA = 5;
+const int LISTAR_PARADAS = 6;
+const int OPCION_SALIDA = 7;
 
 //Look&Feel
 const int ROW_SIZE = 80;
 
-void cargarCiudad(HashCiudades &hashCiudades);
+void cargarLasCiudades(HashCiudades &hashCiudades);
 
-void agregarRuta(GrafoRecorridos &grafoRecorridos);
+void agregarRuta(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades);
 
 void agregarLinea(ABBLineas &arbolLineas, HashCiudades hashCiudades);
 
