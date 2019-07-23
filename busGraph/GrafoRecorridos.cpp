@@ -35,11 +35,19 @@ Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos){
 }
 
 void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos){
-    int origen;
-    int destino;
-    printf("Codigo ciudad origen:");
-    scanf("%d",&origen);
-    printf("Codigo ciudad destino:");
-    scanf("%d",&destino);
-    insertarArista(grafoRecorridos, origen, destino);
+    int origenVertice;
+    int destinoVertice;
+    String origen;
+    String destino;
+    printf("Nombre ciudad origen:");
+    strcrear(origen);
+    scan(origen);
+    printf("Nombre ciudad destino:");
+    strcrear(destino);
+    scan(destino);
+    int dispOrigen=h(origen);
+    origenVertice=dispOrigen;
+    int dispDestino=h(destino);
+    destinoVertice=dispDestino;
+    insertarArista(grafoRecorridos, origenVertice,destinoVertice);
 }

@@ -11,30 +11,32 @@
 
 int main() {
     int opcion = NINGUNA;
-    
+
     GrafoRecorridos grafoRecorridos;
     HashCiudades hashCiudades;
-    crearGrafoRecorridos(grafoRecorridos);
+
     make(hashCiudades);
     ABBLineas arbolLineas;
-    crearABBLineas(arbolLineas);
+    MakeABB(arbolLineas);
     printf("///////////////////////////////////////////////////////////\n");
     printf("Bienvenido a busGraph, app para el manejo de lineas de transporte");
     printf("urbano.");
     printf("\n");
     printf("///////////////////////////////////////////////////////////\n");
-    
-    while(opcion != OPCION_SALIDA){
-        switch (opcion) {
-            case REGISTRAR_CIUDADES:
-                printLinea();
+
+    printLinea();
                 printf("Ingrese codigo y nombre de ciudad\n");
                 printLinea();
                 cargarCiudad(hashCiudades);
+                crearGrafoRecorridos(grafoRecorridos);
+
                 opcion = NINGUNA;
-                printf("CIUDAD CARGADA CORRECTAMENTE\n");
+                printf("CIUDADES CARGADAS CORRECTAMENTE\n");
                 printLinea();
-                break;
+
+    while(opcion != OPCION_SALIDA){
+
+        switch (opcion) {
             case REGISTRAR_RUTAS:
                 printLinea();
                 printf("Ingrese los codigos ciudad para agregar la ruta\n");
@@ -92,5 +94,5 @@ int main() {
                 break;
         }
     }
-    
+
 }

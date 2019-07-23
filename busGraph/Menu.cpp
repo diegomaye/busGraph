@@ -22,7 +22,9 @@ void imprimirMenu(int &opcion){
 }
 
 void cargarCiudad(HashCiudades &hashCiudades){
-    cargarDatosCiudadEnHash(hashCiudades);
+    for(int i=0; i<CANT_CIUDADES; i++)
+        cargarDatosCiudadEnHash(hashCiudades);
+
 }
 
 void agregarRuta(GrafoRecorridos &grafoRecorridos){
@@ -39,26 +41,26 @@ void agregarLinea(ABBLineas &arbolLineas, HashCiudades ciudades){
     printf("Ingrese parada para la linea:");
     scan(nombreCiudad);
     if(member(ciudades, nombreCiudad)==TRUE){
-        Ciudad ciudad = find(ciudades, nombreCiudad);
+        Ciudad ciudad = Find(ciudades, nombreCiudad);
         cargarDatosArbolLineas(arbolLineas, parada, DarCodigo(ciudad));
     }
-    
+
 }
 
 void buscarRecorrido(GrafoRecorridos &grafoRecorridos){
-    
+
 }
 
 void listarLineas(ABBLineas arbolLineas){
-    
+
 }
 
 void registrarParada(GrafoRecorridos &grafoRecorridos, ABBLineas &arbolLineas){
-    
+
 }
 
 void listarParadas(ABBLineas arbolLineas){
-    
+
 }
 
 void printLinea(){

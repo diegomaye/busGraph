@@ -24,8 +24,8 @@ void mostrarDatosCiudad(Ciudad c)
     printf("\nEl codigo de la ciudad es:%d",c.codigo);
 }
 
-<<<<<<< HEAD
-=======
+///<<<<<<< HEAD
+///=======
 int DarCodigo(Ciudad c){
     return c.codigo;
 }
@@ -33,4 +33,4 @@ int DarCodigo(Ciudad c){
 String DarNombre(Ciudad c){
     return c.nombre;
 }
->>>>>>> de2bf106f40b78f3b24bbbcc58eedfa1cb77a977
+///>>>>>>> de2bf106f40b78f3b24bbbcc58eedfa1cb77a977

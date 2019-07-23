@@ -9,8 +9,8 @@
 
 #include "HashCiudades.h"
 
-<<<<<<< HEAD
-=======
+///<<<<<<< HEAD
+///=======
 void make(HashCiudades &ciudades){
     int i;
     for (i=0; i<CANT_CIUDADES; i++)
@@ -31,12 +31,12 @@ Boolean member(HashCiudades ciudades, String clave) {
     }
 }
 
-Ciudad find(HashCiudades ciudades, String clave) {
+Ciudad Find(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
     return ciudades[cubeta] -> info;
 }
 
-void insert(HashCiudades &ciudades, Ciudad ciudad) {
+void Insert(HashCiudades &ciudades, Ciudad ciudad) {
     String nombre = DarNombre(ciudad);
     int cubeta = h(nombre);
     insFront(ciudades[cubeta], ciudad);
@@ -63,6 +63,6 @@ int h(String clave){
 void cargarDatosCiudadEnHash(HashCiudades &ciudades){
     Ciudad ciudad;
     cargarDatosCiudad(ciudad);
-    insert(ciudades, ciudad);
+    Insert(ciudades, ciudad);
 }
->>>>>>> de2bf106f40b78f3b24bbbcc58eedfa1cb77a977
+///>>>>>>> de2bf106f40b78f3b24bbbcc58eedfa1cb77a977

@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1563754609 source:c:\users\usuario\documents\github\busgraph\busgraph\graforecorridos.cpp
+1563842849 source:c:\users\usuario\documents\github\busgraph\busgraph\graforecorridos.cpp
 	"GrafoRecorridos.h"
 
-1563754609 c:\users\usuario\documents\github\busgraph\busgraph\graforecorridos.h
-	"HashCiudades.h"
+1563825382 c:\users\usuario\documents\github\busgraph\busgraph\graforecorridos.h
 	<stdio.h>
+	"HashCiudades.h"
 
-1563752808 c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.h
+1563842878 c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.h
 	<stdio.h>
 	"Ciudad.h"
 
-1563751088 c:\users\usuario\documents\github\busgraph\busgraph\ciudad.h
+1563826302 c:\users\usuario\documents\github\busgraph\busgraph\ciudad.h
 	<stdio.h>
 	"String.h"
 
@@ -21,4 +21,64 @@
 
 1563477800 c:\users\usuario\documents\github\busgraph\busgraph\boolean.h
 	<stdio.h>
+
+1563836430 source:c:\users\usuario\documents\github\busgraph\busgraph\main.cpp
+	<stdio.h>
+	"Menu.h"
+
+1563825382 c:\users\usuario\documents\github\busgraph\busgraph\menu.h
+	"Error.h"
+	"GrafoRecorridos.h"
+	"HashCiudades.h"
+	"ABBLineas.h"
+
+1563825382 c:\users\usuario\documents\github\busgraph\busgraph\error.h
+	<stdio.h>
+	"String.h"
+
+1563831249 c:\users\usuario\documents\github\busgraph\busgraph\abblineas.h
+	<stdio.h>
+	"Linea.h"
+
+1563825382 c:\users\usuario\documents\github\busgraph\busgraph\linea.h
+	<stdio.h>
+	"LPPFParadas.h"
+
+1563496656 c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.h
+	<stdio.h>
+	"Parada.h"
+
+1563825382 c:\users\usuario\documents\github\busgraph\busgraph\parada.h
+	<stdio.h>
+	"String.h"
+
+1563831473 source:c:\users\usuario\documents\github\busgraph\busgraph\abblineas.cpp
+	"ABBLineas.h"
+
+1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\boolean.cpp
+	"Boolean.h"
+
+1563826327 source:c:\users\usuario\documents\github\busgraph\busgraph\ciudad.cpp
+	"Ciudad.h"
+
+1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\error.cpp
+	"Error.h"
+
+1563825382 source:c:\users\usuario\documents\github\busgraph\busgraph\linea.cpp
+	"Linea.h"
+
+1563479967 source:c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.cpp
+	"LPPFParadas.h"
+
+1563842849 source:c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.cpp
+	"HashCiudades.h"
+
+1563825382 source:c:\users\usuario\documents\github\busgraph\busgraph\parada.cpp
+	"Parada.h"
+
+1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\string.cpp
+	"String.h"
+
+1563837811 source:c:\users\usuario\documents\github\busgraph\busgraph\menu.cpp
+	"Menu.h"
 

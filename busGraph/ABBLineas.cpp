@@ -8,3 +8,31 @@
 //
 
 #include "ABBLineas.h"
+
+void MakeABB(ABBLineas &arbolLineas)
+{
+    arbolLineas=NULL;
+}
+
+/*void insertABB(ABBLineas &arbolLineas, Linea linea)
+{
+    if (arbolLineas == NULL)
+    {
+        arbolLineas = new NodoLinea;
+        arbolLineas->info = linea;
+        arbolLineas->hizq = NULL;
+        arbolLineas->hder = NULL;
+    }
+    else
+    {
+        if (DarCodigo(linea) < DarCodigo(arbolLineas->info))
+            insertABB(arbolLineas->hizq, linea);
+        else
+            InsertABB(arbolLineas->hder, linea);
+    }
+}*/
+
+void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad)
+{
+
+}

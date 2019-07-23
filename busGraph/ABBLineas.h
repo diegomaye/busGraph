@@ -21,9 +21,12 @@ typedef struct nodo_linea{
 
 typedef NodoLinea * ABBLineas;
 
-void crearABBLineas(ABBLineas &arbolLineas);
+void MakeABB(ABBLineas &arbolLineas);
 
-void insertarLinea(ABBLineas &arbol, Linea linea);
+void insertABB(ABBLineas &arbolLineas, Linea linea);
+
+void ListarABB(ABBLineas arbolLineas);
+
 
 void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad);
 
