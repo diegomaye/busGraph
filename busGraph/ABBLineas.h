@@ -11,15 +11,22 @@
 #define ABBLineas_h
 
 #include <stdio.h>
+#include "Linea.h"
 
 typedef struct nodo_linea{
-    int nro;
+    Linea info;
     nodo_linea * hizq;
     nodo_linea * hder;
 } NodoLinea;
 
 typedef NodoLinea * ABBLineas;
 
-void crearABBLineas(ABBLineas &arbolLineas);
+void MakeABB(ABBLineas &arbolLineas);
+
+void insertABB(ABBLineas &arbolLineas, Linea linea);
+
+void ListarABB(ABBLineas arbolLineas);
+
+void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad);
 
 #endif /* ABBLineas_h */

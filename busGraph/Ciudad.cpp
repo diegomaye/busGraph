@@ -8,11 +8,12 @@
 
 #include "Ciudad.h"
 
-void cargarDatosCiudad(Ciudad &c)
+void cargarDatosCiudad(Ciudad &ciudad, int indice)
 {
-    scan(c.nombre);
-    printf("Ingrese el codigo de la ciudad: ");
-    scanf("%d",&c.codigo);
+    printf("Nombre Ciudad:");
+    strcrear(ciudad.nombre);
+    scan(ciudad.nombre);
+    ciudad.codigo = indice;
 }
 
 void mostrarDatosCiudad(Ciudad c)
@@ -20,4 +21,12 @@ void mostrarDatosCiudad(Ciudad c)
     printf("El nombre de la ciudad es: ");
     print(c.nombre);
     printf("\nEl codigo de la ciudad es:%d",c.codigo);
+}
+
+int DarCodigo(Ciudad c){
+    return c.codigo;
+}
+
+String DarNombre(Ciudad c){
+    return c.nombre;
 }

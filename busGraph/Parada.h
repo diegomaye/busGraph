@@ -10,13 +10,15 @@
 #define Parada_h
 
 #include <stdio.h>
+#include "String.h"
 
 typedef struct{
     int codigoCiudad;
-    int numeroParada;
+    String numeroParada;
 } Parada;
 
 void cargarDatosParada(Parada &p);
 void mostrarDatosParada(Parada p);
+
 
 #endif /* Parada_h */

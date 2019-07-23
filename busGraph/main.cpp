@@ -11,36 +11,38 @@
 
 int main() {
     int opcion = NINGUNA;
-    
+
     GrafoRecorridos grafoRecorridos;
-    crearGrafoRecorridos(grafoRecorridos);
+    HashCiudades hashCiudades;
+
+    make(hashCiudades);
     ABBLineas arbolLineas;
-    crearABBLineas(arbolLineas);
-    Boolean salirSistema = FALSE;
+    MakeABB(arbolLineas);
+    crearGrafoRecorridos(grafoRecorridos);
+    opcion = NINGUNA;
+    
     printf("///////////////////////////////////////////////////////////\n");
     printf("Bienvenido a busGraph, app para el manejo de lineas de transporte");
     printf("urbano.");
     printf("\n");
     printf("///////////////////////////////////////////////////////////\n");
-    
+    printLinea();
+    printf("Ingrese codigo y nombre de ciudad\n");
+    printLinea();
+    cargarLasCiudades(hashCiudades);
+    printLinea();
+    printf("CIUDADES CARGADAS CORRECTAMENTE\n");
+    printLinea();
+
     while(opcion != OPCION_SALIDA){
+
         switch (opcion) {
-            case REGISTRAR_CIUDADES:
-                printLinea();
-                printf("Ingrese codigo y nombre de ciudad\n");
-                printLinea();
-                cargarCiudad(grafoRecorridos);
-                opcion = NINGUNA;
-                printf("CIUDAD CARGADA CORRECTAMENTE\n");
-                printLinea();
-                break;
             case REGISTRAR_RUTAS:
                 printLinea();
                 printf("Ingrese los codigos ciudad para agregar la ruta\n");
                 printLinea();
-                agregarRuta(grafoRecorridos);
+                agregarRuta(grafoRecorridos, hashCiudades);
                 opcion = NINGUNA;
-                printf("RUTA AGREGADA CORRECTAMENTE\n");
                 printLinea();
                 break;
             case BUSCAR_RECORRIDOS:
@@ -49,6 +51,15 @@ int main() {
                 printLinea();
                 buscarRecorrido(grafoRecorridos);
                 opcion = NINGUNA;
+                printLinea();
+                break;
+            case REGISTRAR_LINEA:
+                printLinea();
+                printf("Ingrese los datos de la nueva linea\n");
+                printLinea();
+                agregarLinea(arbolLineas, hashCiudades);
+                opcion = NINGUNA;
+                printf("LINEA INGRESADA CORRECTAMENTE\n");
                 printLinea();
                 break;
             case LISTAR_LINEAS:
@@ -82,5 +93,5 @@ int main() {
                 break;
         }
     }
-    
+
 }
