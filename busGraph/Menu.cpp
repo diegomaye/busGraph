@@ -10,9 +10,9 @@
 void imprimirMenu(int &opcion){
     printf("Elija lo que desea realizar\n");
     printf("1. Registrar una Ruta\n");
-    printf("2. Buscar recorrido entre ciudades\n");
+    printf("2. Buscar Recorrido\n");
     printf("3. Registar Linea\n");
-    printf("4. Listar lineas\n");
+    printf("4. Listar Lineas\n");
     printf("5. Registar Parada\n");
     printf("6. Listar Paradas\n");
     printf("7. Salir\n");
@@ -69,7 +69,7 @@ void buscarRecorrido(GrafoRecorridos &grafoRecorridos){
 }
 
 void listarLineas(ABBLineas arbolLineas){
-    ListarABB(arbolLineas);
+    listarABB(arbolLineas);
 }
 
 void registrarParada(GrafoRecorridos &grafoRecorridos, ABBLineas &arbolLineas){

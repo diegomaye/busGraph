@@ -30,16 +30,21 @@ Boolean member(HashCiudades ciudades, String clave) {
 }
 
 Boolean perteneceLista(lista cubeta, String clave){
-    Ciudad ciudad = cubeta -> info;
-    String claveCiudad = DarNombre(ciudad);
-    if(strreq(claveCiudad, clave)){
-        return TRUE;
-    }
-    else if(cubeta -> sig == NULL){
+    if(cubeta == NULL){
         return FALSE;
     }
     else {
-        return perteneceLista(cubeta -> sig, clave);
+        Ciudad ciudad = cubeta -> info;
+        String claveCiudad = DarNombre(ciudad);
+        if(strreq(claveCiudad, clave)){
+            return TRUE;
+        }
+        else if(cubeta -> sig == NULL){
+            return FALSE;
+        }
+        else {
+            return perteneceLista(cubeta -> sig, clave);
+        }
     }
 }
 
@@ -79,8 +84,8 @@ int h(String clave){
     length = strlar(clave);
     for(i=0; i<length; i++){
         dispercion += clave[i];
-        dispercion = dispercion % CANT_CIUDADES;
     }
+    dispercion = dispercion % CANT_CIUDADES;
     return dispercion;
 }
 

@@ -21,13 +21,13 @@ typedef struct nodo_linea{
 
 typedef NodoLinea * ABBLineas;
 
-void MakeABB(ABBLineas &arbolLineas);
+void makeABB(ABBLineas &arbolLineas);
 
 void insertABB(ABBLineas &arbolLineas, Linea linea);
 
-Boolean MemberABB(ABBLineas arbolLineas,String codigo);
+Boolean memberABB(ABBLineas arbolLineas,String codigo);
 
-void ListarABB(ABBLineas arbolLineas);
+void listarABB(ABBLineas arbolLineas);
 
 void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad);
 

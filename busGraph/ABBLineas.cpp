@@ -9,7 +9,7 @@
 
 #include "ABBLineas.h"
 
-void MakeABB(ABBLineas &arbolLineas)
+void makeABB(ABBLineas &arbolLineas)
 {
     arbolLineas=NULL;
 }
@@ -45,13 +45,13 @@ void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad){
     insertABB(arbolLineas, linea);
 }
 
-void ListarABB(ABBLineas arbolLineas)
+void listarABB(ABBLineas arbolLineas)
 {
     if (arbolLineas != NULL)
     {
-        ListarABB(arbolLineas-> hizq);
+        listarABB(arbolLineas-> hizq);
         mostrarDatosLinea(arbolLineas->info);
-        ListarABB(arbolLineas-> hder);
+        listarABB(arbolLineas-> hder);
     }
 }
 

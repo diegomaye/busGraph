@@ -17,7 +17,7 @@ int main() {
 
     make(hashCiudades);
     ABBLineas arbolLineas;
-    MakeABB(arbolLineas);
+    makeABB(arbolLineas);
     crearGrafoRecorridos(grafoRecorridos);
     opcion = NINGUNA;
     

@@ -9,8 +9,6 @@
 #include "Linea.h"
 
 void cargarDatosLinea(Linea &linea, String parada, int ciudad){
-
-    ///ACA DEBERIA DE CARGAR LAS PARADAS Y NO EN EL MENU
     linea.codigoLinea = parada;
     linea.codigoOrigen = ciudad;
     linea.codigoDestino = ciudad;
@@ -22,8 +20,8 @@ void DarCodigoLinea(Linea linea, String &nombre){
 
 void mostrarDatosLinea(Linea linea)
 {
-    printf("\nEl codigo de linea es: ");
+    printf("El codigo de linea es: \n");
     print(linea.codigoLinea);
-    printf("\nEl codigo de origen es:%d",linea.codigoOrigen);
-    printf("\nEl codigo del destino es:%d",linea.codigoDestino);
+    printf("La ciudad de origen es:%d\n",linea.codigoOrigen);
+    printf("La ciudad de destino es destino es:%d\n",linea.codigoDestino);
 }
