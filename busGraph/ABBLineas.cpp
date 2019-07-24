@@ -29,9 +29,9 @@ void insertABB(ABBLineas &arbolLineas, Linea linea)
         String codigoLineaArbol;
         strcrear(codigoLinea);
         strcrear(codigoLineaArbol);
-        DarCodigo(linea, codigoLinea);
+        DarCodigoLinea(linea, codigoLinea);
         Linea linea2 = arbolLineas -> info;
-        DarCodigo(linea2, codigoLineaArbol);
+        DarCodigoLinea(linea2, codigoLineaArbol);
         if (strmen(codigoLinea, codigoLineaArbol))
             insertABB(arbolLineas->hizq, linea);
         else
@@ -44,3 +44,33 @@ void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad){
     cargarDatosLinea(linea, parada, ciudad);
     insertABB(arbolLineas, linea);
 }
+
+void ListarABB(ABBLineas arbolLineas)
+{
+    if (arbolLineas != NULL)
+    {
+        ListarABB(arbolLineas-> hizq);
+        listarLPPF(arbolLineas);
+        ListarABB(arbolLineas-> hder);
+    }
+}
+
+/*Boolean MemberABB(ABBLineas arbolLineas,String codigo)
+{
+    Linea linea= arbolLineas->info;
+
+    if (arbolLineas == NULL)
+        return FALSE;
+    else
+    {
+        if (strreq(codigo,DarCodigoLinea(arbolLineas,linea)))
+            return TRUE;
+        else
+        {
+            if (codigo < DarCodigoLinea(linea,codigo))
+                return MemberABB (arbolLineas->hizq, codigo);
+            else
+                return MemberABB (arbolLineas->hder, codigo);
+        }
+    }
+}*/

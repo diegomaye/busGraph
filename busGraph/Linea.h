@@ -20,7 +20,8 @@ typedef struct{
 } Linea;
 
 void cargarDatosLinea(Linea &linea, String parada, int ciudad);
+void mostrarDatosLinea(Linea linea);
 
-void DarCodigo(Linea linea, String &nombre);
+void DarCodigoLinea(Linea linea, String &nombre);
 
 #endif /* Linea_h */

@@ -36,13 +36,32 @@ void agregarLinea(ABBLineas &arbolLineas, HashCiudades ciudades){
     strcrear(parada);
     printf("Ingrese codigo linea:");
     scan(parada);
-    printf("Ingrese parada para la linea:");
-    scan(nombreCiudad);
-    if(member(ciudades, nombreCiudad)==TRUE){
-        Ciudad ciudad = find(ciudades, nombreCiudad);
-        cargarDatosArbolLineas(arbolLineas, parada, DarCodigo(ciudad));
-    }
+    if(!esAlfanumerico(parada))
+    {
+        printf("ERROR: El codigo no es alfanumerico\n");
+         while(!esAlfanumerico(parada))
+        {
 
+            printf("Ingrese codigo linea:");
+            scan(parada);
+            printf("Ingrese parada para la linea:");
+            scan(nombreCiudad);
+            if(member(ciudades, nombreCiudad)==TRUE){
+                Ciudad ciudad = find(ciudades, nombreCiudad);
+                cargarDatosArbolLineas(arbolLineas, parada, DarCodigo(ciudad));
+            }
+        }
+    }
+    else
+    {
+        printf("Ingrese parada para la linea:");
+        scan(nombreCiudad);
+        if(member(ciudades, nombreCiudad)==TRUE){
+            Ciudad ciudad = find(ciudades, nombreCiudad);
+            cargarDatosArbolLineas(arbolLineas, parada, DarCodigo(ciudad));
+
+        }
+    }
 }
 
 void buscarRecorrido(GrafoRecorridos &grafoRecorridos){

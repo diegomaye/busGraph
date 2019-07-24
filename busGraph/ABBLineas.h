@@ -25,6 +25,8 @@ void MakeABB(ABBLineas &arbolLineas);
 
 void insertABB(ABBLineas &arbolLineas, Linea linea);
 
+Boolean MemberABB(ABBLineas arbolLineas,String codigo);
+
 void ListarABB(ABBLineas arbolLineas);
 
 void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad);

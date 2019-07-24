@@ -23,4 +23,8 @@ typedef struct  {
     NodoParada * ultimaParada;
 } LPPFParadas;
 
+void crearLPPFParadas(LPPFParadas &lppfParadas);
+void insertarLPPFParada(LPPFParadas &lppfParadas, Parada parada);
+void listarLPPF(LPPFParadas lppfParadas);
+
 #endif /* LPPFParadas_h */

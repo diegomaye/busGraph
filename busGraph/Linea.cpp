@@ -14,6 +14,14 @@ void cargarDatosLinea(Linea &linea, String parada, int ciudad){
     linea.codigoDestino = ciudad;
 }
 
-void DarCodigo(Linea linea, String &nombre){
+void DarCodigoLinea(Linea linea, String &nombre){
     strcop(nombre, linea.codigoLinea);
+}
+
+void mostrarDatosLinea(Linea linea)
+{
+    printf("El codigo de linea es: ");
+    print(linea.codigoLinea);
+    printf("El codigo de origen es:%d",linea.codigoOrigen);
+    printf("El codigo de destino es:%d",linea.codigoDestino);
 }
