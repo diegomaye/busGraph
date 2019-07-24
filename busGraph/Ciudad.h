@@ -21,6 +21,6 @@ void cargarDatosCiudad(Ciudad &ciudad, int indice);
 void mostrarDatosCiudad(Ciudad ciudad);
 
 int DarCodigo(Ciudad c);
-String DarNombre(Ciudad c);
+void DarNombre(Ciudad c,String &clave);
 
 #endif /* Ciudad_h */

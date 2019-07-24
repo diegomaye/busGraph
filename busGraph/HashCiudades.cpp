@@ -18,35 +18,55 @@ void make(HashCiudades &ciudades){
 void crearLista(lista ciudades){
     ciudades = NULL;
 }
-
 Boolean member(HashCiudades ciudades, String clave) {
-    int cubeta = h(clave);
-    if(ciudades[cubeta] == NULL){
+    /*int cubeta = h(clave);
+    lista aux=ciudades[cubeta];
+    if(aux == NULL){
         return FALSE;
     }
     else{
-        return perteneceLista(ciudades[cubeta], clave);
-    }
+        return perteneceLista(aux, clave);
+    }*/
+    int cubeta = h(clave);
+    return perteneceLista(ciudades[cubeta],clave);
+
 }
 
 Boolean perteneceLista(lista cubeta, String clave){
-    if(cubeta == NULL){
+    /*Ciudad ciudad = cubeta -> info;
+    String claveCiudad;
+    strcrear(claveCiudad);
+    DarNombre(ciudad,claveCiudad);
+    if(strreq(claveCiudad,clave)){
+        return TRUE;
+    }
+    else if(cubeta -> sig == NULL){
         return FALSE;
     }
     else {
-        Ciudad ciudad = cubeta -> info;
-        String claveCiudad = DarNombre(ciudad);
-        if(strreq(claveCiudad, clave)){
-            return TRUE;
+        return perteneceLista(cubeta -> sig, clave);
+    }*/
+    Boolean esta=FALSE;
+    String aux;
+    strcrear(aux);
+    while((cubeta!=NULL)&&!esta)
+    {
+        DarNombre(cubeta->info,aux);
+        if(strreq(aux,clave))
+        {
+            esta=TRUE;
         }
-        else if(cubeta -> sig == NULL){
-            return FALSE;
-        }
-        else {
-            return perteneceLista(cubeta -> sig, clave);
+        else
+        {
+            cubeta=cubeta->sig;
+            strdestruir(aux);
         }
     }
+    return esta;
 }
+
+
+
 
 /*PRECONDICION: La ciudad se enceuntra en el Hash (evaluar previamente con member)*/
 Ciudad find(HashCiudades ciudades, String clave) {

@@ -27,6 +27,7 @@ int DarCodigo(Ciudad c){
     return c.codigo;
 }
 
-String DarNombre(Ciudad c){
-    return c.nombre;
+void DarNombre(Ciudad c,String &clave)
+{
+    strcop(clave, c.nombre);
 }
