@@ -9,6 +9,8 @@
 #include "Linea.h"
 
 void cargarDatosLinea(Linea &linea, String parada, int ciudad){
+
+    ///ACA DEBERIA DE CARGAR LAS PARADAS Y NO EN EL MENU
     linea.codigoLinea = parada;
     linea.codigoOrigen = ciudad;
     linea.codigoDestino = ciudad;
