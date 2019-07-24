@@ -50,7 +50,7 @@ void ListarABB(ABBLineas arbolLineas)
     if (arbolLineas != NULL)
     {
         ListarABB(arbolLineas-> hizq);
-        listarLPPF(arbolLineas);
+        mostrarDatosLinea(arbolLineas->info);
         ListarABB(arbolLineas-> hder);
     }
 }

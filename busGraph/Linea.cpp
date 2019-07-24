@@ -20,8 +20,8 @@ void DarCodigoLinea(Linea linea, String &nombre){
 
 void mostrarDatosLinea(Linea linea)
 {
-    printf("El codigo de linea es: ");
+    printf("\nEl codigo de linea es: ");
     print(linea.codigoLinea);
-    printf("El codigo de origen es:%d",linea.codigoOrigen);
-    printf("El codigo de destino es:%d",linea.codigoDestino);
+    printf("\nEl codigo de origen es:%d",linea.codigoOrigen);
+    printf("\nEl codigo de destino es:%d",linea.codigoDestino);
 }

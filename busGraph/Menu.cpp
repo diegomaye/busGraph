@@ -69,7 +69,7 @@ void buscarRecorrido(GrafoRecorridos &grafoRecorridos){
 }
 
 void listarLineas(ABBLineas arbolLineas){
-
+    ListarABB(arbolLineas);
 }
 
 void registrarParada(GrafoRecorridos &grafoRecorridos, ABBLineas &arbolLineas){

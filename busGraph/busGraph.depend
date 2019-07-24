@@ -36,15 +36,15 @@
 	<stdio.h>
 	"String.h"
 
-1563904683 c:\users\usuario\documents\github\busgraph\busgraph\abblineas.h
+1563925232 c:\users\usuario\documents\github\busgraph\busgraph\abblineas.h
 	<stdio.h>
 	"Linea.h"
 
-1563904683 c:\users\usuario\documents\github\busgraph\busgraph\linea.h
+1563929619 c:\users\usuario\documents\github\busgraph\busgraph\linea.h
 	<stdio.h>
 	"LPPFParadas.h"
 
-1563920031 c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.h
+1563929899 c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.h
 	<stdio.h>
 	"Parada.h"
 
@@ -52,7 +52,7 @@
 	<stdio.h>
 	"String.h"
 
-1563904683 source:c:\users\usuario\documents\github\busgraph\busgraph\abblineas.cpp
+1563933466 source:c:\users\usuario\documents\github\busgraph\busgraph\abblineas.cpp
 	"ABBLineas.h"
 
 1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\boolean.cpp
@@ -64,10 +64,10 @@
 1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\error.cpp
 	"Error.h"
 
-1563904683 source:c:\users\usuario\documents\github\busgraph\busgraph\linea.cpp
+1563933904 source:c:\users\usuario\documents\github\busgraph\busgraph\linea.cpp
 	"Linea.h"
 
-1563920518 source:c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.cpp
+1563931586 source:c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.cpp
 	"LPPFParadas.h"
 
 1563904683 source:c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.cpp
@@ -79,6 +79,6 @@
 1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\string.cpp
 	"String.h"
 
-1563923325 source:c:\users\usuario\documents\github\busgraph\busgraph\menu.cpp
+1563933634 source:c:\users\usuario\documents\github\busgraph\busgraph\menu.cpp
 	"Menu.h"
 
