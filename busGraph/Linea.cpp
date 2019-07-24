@@ -23,5 +23,5 @@ void mostrarDatosLinea(Linea linea)
     printf("\nEl codigo de linea es: ");
     print(linea.codigoLinea);
     printf("\nEl codigo de origen es:%d",linea.codigoOrigen);
-    printf("\nEl codigo de destino es:%d",linea.codigoDestino);
+    printf("\nEl codigo del destino es:%d",linea.codigoDestino);
 }
