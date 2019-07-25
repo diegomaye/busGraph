@@ -30,27 +30,22 @@ Boolean memberHash(HashCiudades ciudades, String clave) {
 }
 
 Boolean perteneceLista(lista cubeta, String clave){
-    if(cubeta == NULL){
+    Ciudad ciudad = cubeta -> info;
+    String claveCiudad;
+    strcrear(claveCiudad);
+    DarNombre(ciudad,claveCiudad);
+    if(streq(claveCiudad, clave)){
+        return TRUE;
+    }
+    else if(cubeta -> sig == NULL){
         return FALSE;
     }
     else {
-        Ciudad ciudad = cubeta -> info;
-        String claveCiudad;
-        strcrear(claveCiudad);
-        DarNombre(ciudad, claveCiudad);
-        if(streq(claveCiudad, clave)){
-            return TRUE;
-        }
-        else if(cubeta -> sig == NULL){
-            return FALSE;
-        }
-        else {
-            return perteneceLista(cubeta -> sig, clave);
-        }
+        return perteneceLista(cubeta -> sig, clave);
     }
 }
 
-/*PRECONDICION: La ciudad se enceuntra en el Hash (evaluar previamente con member)*/
+/*PRECONDICION: La ciudad se enceuntra en el Hash (evaluar previament e con member)*/
 Ciudad findHash(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
     return buscarLista(ciudades[cubeta], clave);
