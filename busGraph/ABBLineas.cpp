@@ -34,6 +34,9 @@ void insertABB(ABBLineas &arbolLineas, Linea linea)
         DarCodigoLinea(linea2, codigoLineaArbol);
         if (strmen(codigoLinea, codigoLineaArbol))
             insertABB(arbolLineas->hizq, linea);
+        else if(streq(codigoLinea, codigoLineaArbol)){
+            arbolLineas -> info = linea;
+        }
         else
             insertABB(arbolLineas->hder, linea);
     }

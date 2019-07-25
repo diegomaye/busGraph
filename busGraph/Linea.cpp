@@ -40,6 +40,6 @@ void mostrarDatosLinea(Linea linea)
 
 void instertarParada(Linea &linea, Parada parada){
     linea.ciudadDestino = parada.nombreCiudad;
-    linea.cantidadParadas++;
+    linea.cantidadParadas = linea.cantidadParadas + 1;
     insertarLPPFParada(linea.paradas, parada);
 }

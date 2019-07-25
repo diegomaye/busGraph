@@ -36,24 +36,27 @@ void agregarLinea(ABBLineas &arbolLineas, HashCiudades ciudades){
     strcrear(parada);
     printf("Ingrese codigo linea:");
     scan(parada);
-    if(!esAlfanumerico(parada))
-    {
-        printf("ERROR: El codigo no es alfanumerico\n");
+    if(memberABB(arbolLineas, parada) == TRUE){
+        printf("ERROR: Ya existe una linea con ese codigo\n");
     }
-    else
-    {
-        printf("Ingrese parada para la linea:");
-        scan(nombreCiudad);
-        if(memberHash(ciudades, nombreCiudad) == TRUE){
-            Ciudad ciudad = findHash(ciudades, nombreCiudad);
-            String nombreCiudad;
-            strcrear(nombreCiudad);
-            DarNombre(ciudad, nombreCiudad);
-            cargarDatosArbolLineas(arbolLineas, parada, nombreCiudad);
-            printf("LINEA INGRESADA CORRECTAMENTE\n");
+    else {
+        if(!esAlfanumerico(parada)) {
+            printf("ERROR: El codigo no es alfanumerico\n");
         }
-        else{
-            printf("ERROR: La ciudad no existe\n");
+        else {
+            printf("Ingrese parada para la linea:");
+            scan(nombreCiudad);
+            if(memberHash(ciudades, nombreCiudad) == TRUE){
+                Ciudad ciudad = findHash(ciudades, nombreCiudad);
+                String nombreCiudad;
+                strcrear(nombreCiudad);
+                DarNombre(ciudad, nombreCiudad);
+                cargarDatosArbolLineas(arbolLineas, parada, nombreCiudad);
+                printf("LINEA INGRESADA CORRECTAMENTE\n");
+            }
+            else{
+                printf("ERROR: La ciudad no existe\n");
+            }
         }
     }
 }
@@ -132,6 +135,7 @@ void registrarParada(ABBLineas &arbolLineas, HashCiudades ciudades){
             DarNombre(ciudad, nombreCiudad);
             cargarDatosParada(instanciaParada, numeroParada, nombreCiudad);
             instertarParada(linea, instanciaParada);
+            insertABB(arbolLineas, linea);
             printf("PARADA REGISTRADA CORRECTAMENTE\n");
         }
     }
