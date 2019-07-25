@@ -19,7 +19,7 @@ void insertarLPPFParada(LPPFParadas &lppfParadas, Parada parada) {
     nuevo -> parada = parada;
     nuevo -> sig = NULL;
     if(lppfParadas.ultimaParada == NULL){
-        lppfParadas.ultimaParada = NULL;
+        lppfParadas.ultimaParada = nuevo;
         lppfParadas.primerParada = nuevo;
     } else {
         lppfParadas.ultimaParada -> sig= nuevo;

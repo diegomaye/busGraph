@@ -30,10 +30,6 @@ void insertarArista(GrafoRecorridos &grafoRecorridos, int vert1, int vert2){
             grafoRecorridos[vert2][vert1]=1;
 }
 
-Boolean existeTramo(GrafoRecorridos grafoRecorridos, Ciudad uno, Ciudad dos){
-    return TRUE;
-}
-
 void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades){
     String origen;
     String destino;
