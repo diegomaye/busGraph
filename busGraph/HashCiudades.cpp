@@ -76,7 +76,8 @@ Ciudad find(HashCiudades ciudades, String clave) {
 
 Ciudad buscarLista(lista cubeta, String clave){
     Ciudad ciudad = cubeta -> info;
-    String claveCiudad = DarNombre(ciudad);
+    String claveCiudad;
+    DarNombre(cubeta->info,claveCiudad);
     if(strreq(claveCiudad, clave)){
         return ciudad;
     }
@@ -86,7 +87,8 @@ Ciudad buscarLista(lista cubeta, String clave){
 }
 
 void insert(HashCiudades &ciudades, Ciudad ciudad) {
-    String nombre = DarNombre(ciudad);
+    String nombre;
+    DarNombre(ciudad,nombre);
     int cubeta = h(nombre);
     insFront(ciudades[cubeta], ciudad);
 }

@@ -58,7 +58,7 @@
 1564002383 source:c:\users\usuario\documents\github\busgraph\busgraph\boolean.cpp
 	"Boolean.h"
 
-1564002721 source:c:\users\usuario\documents\github\busgraph\busgraph\ciudad.cpp
+1564020357 source:c:\users\usuario\documents\github\busgraph\busgraph\ciudad.cpp
 	"Ciudad.h"
 
 1564002383 source:c:\users\usuario\documents\github\busgraph\busgraph\error.cpp
@@ -70,15 +70,15 @@
 1564002391 source:c:\users\usuario\documents\github\busgraph\busgraph\lppfparadas.cpp
 	"LPPFParadas.h"
 
-1563904683 source:c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.cpp
+1564020394 source:c:\users\usuario\documents\github\busgraph\busgraph\hashciudades.cpp
 	"HashCiudades.h"
 
-1563825382 source:c:\users\usuario\documents\github\busgraph\busgraph\parada.cpp
+1564002383 source:c:\users\usuario\documents\github\busgraph\busgraph\parada.cpp
 	"Parada.h"
 
-1563477800 source:c:\users\usuario\documents\github\busgraph\busgraph\string.cpp
+1564002383 source:c:\users\usuario\documents\github\busgraph\busgraph\string.cpp
 	"String.h"
 
-1563933634 source:c:\users\usuario\documents\github\busgraph\busgraph\menu.cpp
+1564002391 source:c:\users\usuario\documents\github\busgraph\busgraph\menu.cpp
 	"Menu.h"
 
