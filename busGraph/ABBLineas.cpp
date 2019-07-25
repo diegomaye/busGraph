@@ -39,7 +39,7 @@ void insertABB(ABBLineas &arbolLineas, Linea linea)
     }
 }
 
-void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad){
+void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, String ciudad){
     Linea linea;
     cargarDatosLinea(linea, parada, ciudad);
     insertABB(arbolLineas, linea);
@@ -55,22 +55,39 @@ void listarABB(ABBLineas arbolLineas)
     }
 }
 
-/*Boolean MemberABB(ABBLineas arbolLineas,String codigo)
+Boolean memberABB(ABBLineas arbolLineas, String codigo)
 {
-    Linea linea= arbolLineas->info;
-
     if (arbolLineas == NULL)
         return FALSE;
     else
     {
-        if (strreq(codigo,DarCodigoLinea(arbolLineas,linea)))
+        Linea linea= arbolLineas->info;
+        String codigoLinea;
+        strcrear(codigoLinea);
+        DarCodigoLinea(linea, codigoLinea);
+        if (streq(codigo, codigoLinea))
             return TRUE;
-        else
-        {
-            if (codigo < DarCodigoLinea(linea,codigo))
-                return MemberABB (arbolLineas->hizq, codigo);
+        else {
+            if (strmen(codigo, codigoLinea))
+                return memberABB(arbolLineas->hizq, codigo);
             else
-                return MemberABB (arbolLineas->hder, codigo);
+                return memberABB(arbolLineas->hder, codigo);
         }
     }
-}*/
+}
+
+Linea findABB(ABBLineas arbolLineas, String codigo)
+{
+    Linea linea= arbolLineas->info;
+    String codigoLinea;
+    strcrear(codigoLinea);
+    DarCodigoLinea(linea, codigoLinea);
+    if (streq(codigo, codigoLinea))
+        return linea;
+    else {
+        if (strmen(codigo, codigoLinea))
+            return findABB(arbolLineas->hizq, codigo);
+        else
+            return findABB(arbolLineas->hder, codigo);
+    }
+}

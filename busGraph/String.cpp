@@ -159,7 +159,7 @@ Boolean strmen(String s1,String s2)
     return resu;
 }
 
-Boolean strreq(String s1,String s2)
+Boolean streq(String s1, String s2)
 {
     Boolean resu;
     int i=0;
@@ -302,9 +302,9 @@ Boolean validarExtension(String nombreArchivo)
             txt[2] = 'x';
             txt[3] = 't';
             txt[4] = VACIO;
-            if (strreq(ext, txt)) {
+            if (streq(ext, txt)) {
                 strcon(nombre, ext);
-                if (strreq(nombreArchivo, nombre)) {
+                if (streq(nombreArchivo, nombre)) {
                     resultado = TRUE;
                 }
             }

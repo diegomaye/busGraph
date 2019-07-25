@@ -32,13 +32,13 @@ void agregarRuta(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades);
 
 void agregarLinea(ABBLineas &arbolLineas, HashCiudades hashCiudades);
 
-void buscarRecorrido(GrafoRecorridos &grafoRecorridos);
+void buscarRecorrido(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades);
 
 void listarLineas(ABBLineas arbolLineas);
 
-void registrarParada(GrafoRecorridos &grafoRecorridos, ABBLineas &arbolLineas);
+void registrarParada(ABBLineas &arbolLineas, HashCiudades ciudades);
 
-void listarParadas(ABBLineas arbolLineas);
+void listarParadas(ABBLineas arbolLineas, HashCiudades ciudades);
 
 void imprimirMenu(int &opcion);
 

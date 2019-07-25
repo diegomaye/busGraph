@@ -8,17 +8,15 @@
 
 #include "Parada.h"
 
-void cargarDatosParada(Parada &p){
+void cargarDatosParada(Parada &p, int numeroParada, String nombreCiudad){
     
-    printf("Ingrese codigo ciudad: ");
-    scanf("%d",&p.codigoCiudad);
-    printf("\nIngrese la parada: ");
-    strcrear(p.numeroParada);
-    scan(p.numeroParada);
+    p.numeroParada = numeroParada;
+    p.nombreCiudad = nombreCiudad;
 }
 
 void mostrarDatosParada(Parada p){
-    printf("El codigo de la ciudad es:%d",p.codigoCiudad);
-    printf("\nEl numero de la ciudad es:");
-    print(p.numeroParada);
+    printf("El numero de parada es:%d\n",p.numeroParada);
+    printf("El nombre de la ciudad es:");
+    print(p.nombreCiudad);
+    printf("\n");
 }

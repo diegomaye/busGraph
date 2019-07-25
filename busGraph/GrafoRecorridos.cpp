@@ -43,11 +43,11 @@ void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciu
     printf("Nombre ciudad destino:");
     strcrear(destino);
     scan(destino);
-    if(member(ciudades, origen)){
-        Ciudad ciudadOrigen = find(ciudades, origen);
+    if(memberHash(ciudades, origen)){
+        Ciudad ciudadOrigen = findHash(ciudades, origen);
         int codigoOrigen = DarCodigo(ciudadOrigen);
-        if(member(ciudades, destino)){
-            Ciudad ciudadDestino = find(ciudades, destino);
+        if(memberHash(ciudades, destino)){
+            Ciudad ciudadDestino = findHash(ciudades, destino);
             int codigoDestino = DarCodigo(ciudadDestino);
             insertarArista(grafoRecorridos, codigoOrigen, codigoDestino);
             printf("RUTA AGREGADA CORRECTAMENTE\n");
@@ -61,31 +61,23 @@ void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciu
     }
 }
 
-Boolean ExisteTramo(GrafoRecorridos grafoRecorridos, HashCiudades ciudades)
-{
+Boolean existeTramo(GrafoRecorridos grafoRecorridos, int ciudadOrigen, int ciudadDestino){
     Boolean existe=FALSE;
     Boolean visitado[CANT_CIUDADES];
-    ///PASAR LOS NOMBRES STRING A CODiGOS ENTEROS
-    ///Estos dos enteros deberian de ser los codigos de la ciudad ingresada
-    int ciudadActual;
-    int ciudadDos;
-    for(int i=0;i<CANT_CIUDADES;i++)
-    {
+    for(int i=0; i<CANT_CIUDADES; i++){
         visitado[i]=FALSE;
     }
-    DFS(grafoRecorridos,ciudadActual, ciudadDos, visitado,existe);
+    DFS(grafoRecorridos, ciudadOrigen, ciudadDestino, visitado, existe);
     return existe;
 }
-void DFS(GrafoRecorridos grafoRecorridos, int Ciudadactual, int ciudadDos, Boolean visitado[CANT_CIUDADES], Boolean &existe)
-{
+
+void DFS(GrafoRecorridos grafoRecorridos, int ciudadActual, int ciudadDestino, Boolean visitado[CANT_CIUDADES], Boolean &existe){
     int i=0;
-    visitado[Ciudadactual]=TRUE;
-    while(i<CANT_CIUDADES && !visitado[ciudadDos])
-    {
-        if(grafoRecorridos[Ciudadactual][i]==1)
-        {
+    visitado[ciudadActual]=TRUE;
+    while(i<CANT_CIUDADES && !visitado[ciudadDestino]){
+        if(grafoRecorridos[ciudadActual][i] == 1) {
             if(!visitado[i])
-                DFS(grafoRecorridos,i,ciudadDos,visitado,existe);
+                DFS(grafoRecorridos, i, ciudadDestino, visitado, existe);
         }
         else
             existe=FALSE;

@@ -24,14 +24,14 @@ typedef nodo* lista;
 
 typedef lista HashCiudades[CANT_CIUDADES];
 
-void make(HashCiudades &ciudades);
-void crearLista(lista ciudades);
+void makeHash(HashCiudades &ciudades);
+void crearLista(lista &ciudades);
 
-Boolean member(HashCiudades ciudades,String nombreCiudad);
+Boolean memberHash(HashCiudades ciudades,String nombreCiudad);
 Boolean perteneceLista(lista cubeta, String clave);
 void insert(HashCiudades &ciudades,Ciudad ciudad);
 void insFront(lista &cubeta, Ciudad ciudad);
-Ciudad find(HashCiudades ciudades, String nombreCiudad);
+Ciudad findHash(HashCiudades ciudades, String nombreCiudad);
 Ciudad buscarLista(lista cubeta, String clave);
 
 void cargarDatosCiudadEnHash(HashCiudades &ciudades, int indice);

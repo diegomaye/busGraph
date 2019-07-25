@@ -24,6 +24,6 @@ void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciu
 
 void DFS(GrafoRecorridos grafoRecorridos, int Ciudadactual, int ciudadDos, Boolean visitado[CANT_CIUDADES], Boolean &existe);
 
-Boolean ExisteTramo(GrafoRecorridos grafoRecorridos, HashCiudades ciudades);
+Boolean existeTramo(GrafoRecorridos grafoRecorridos, int ciudadOrigen, int ciudadDestino);
 
 #endif /* GrafoRecorridos_h */

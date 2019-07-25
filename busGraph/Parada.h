@@ -13,11 +13,11 @@
 #include "String.h"
 
 typedef struct{
-    int codigoCiudad;
-    String numeroParada;
+    int numeroParada;
+    String nombreCiudad;
 } Parada;
 
-void cargarDatosParada(Parada &p);
+void cargarDatosParada(Parada &p, int numeroParada, String nombreCiudad);
 void mostrarDatosParada(Parada p);
 
 

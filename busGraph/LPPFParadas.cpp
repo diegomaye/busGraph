@@ -9,30 +9,25 @@
 
 #include "LPPFParadas.h"
 
-void crearLPPFParadas(LPPFParadas &lppfParadas)
-{
+void crearLPPFParadas(LPPFParadas &lppfParadas) {
     lppfParadas.primerParada = NULL;
     lppfParadas.ultimaParada = NULL;
 }
 
-void insertarLPPFParada(LPPFParadas &lppfParadas, Parada parada)
-{
-    NodoParada * nuevo= new NodoParada;
-    nuevo->parada= parada;
-    nuevo->sig=NULL;
-    if(lppfParadas.ultimaParada==NULL)
-    {
-        lppfParadas.ultimaParada=NULL;
-        lppfParadas.primerParada=nuevo;
-    }
-    else
-    {
-        lppfParadas.ultimaParada->sig=nuevo;
-        lppfParadas.ultimaParada=nuevo;
+void insertarLPPFParada(LPPFParadas &lppfParadas, Parada parada) {
+    NodoParada * nuevo = new NodoParada;
+    nuevo -> parada = parada;
+    nuevo -> sig = NULL;
+    if(lppfParadas.ultimaParada == NULL){
+        lppfParadas.ultimaParada = NULL;
+        lppfParadas.primerParada = nuevo;
+    } else {
+        lppfParadas.ultimaParada -> sig= nuevo;
+        lppfParadas.ultimaParada = nuevo;
     }
 }
-void listarLPPF(LPPFParadas lppfParadas)
-{
+
+void listarLPPF(LPPFParadas lppfParadas){
 
     while(lppfParadas.primerParada != NULL)
     {

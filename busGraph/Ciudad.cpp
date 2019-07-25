@@ -8,25 +8,23 @@
 
 #include "Ciudad.h"
 
-void cargarDatosCiudad(Ciudad &ciudad, int indice)
+void cargarDatosCiudad(Ciudad &ciudad, String nombre, int indice)
 {
-    printf("Nombre Ciudad:");
-    strcrear(ciudad.nombre);
-    scan(ciudad.nombre);
+    ciudad.nombre = nombre;
     ciudad.codigo = indice;
 }
 
-void mostrarDatosCiudad(Ciudad c)
+void mostrarDatosCiudad(Ciudad ciudad)
 {
     printf("El nombre de la ciudad es: ");
-    print(c.nombre);
-    printf("\nEl codigo de la ciudad es:%d",c.codigo);
+    print(ciudad.nombre);
+    printf("\nEl codigo de la ciudad es:%d", ciudad.codigo);
 }
 
-int DarCodigo(Ciudad c){
-    return c.codigo;
+int DarCodigo(Ciudad ciudad){
+    return ciudad.codigo;
 }
 
-String DarNombre(Ciudad c){
-    return c.nombre;
+void DarNombre(Ciudad ciudad, String &nombre){
+    nombre = ciudad.nombre;
 }

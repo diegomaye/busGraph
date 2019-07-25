@@ -15,7 +15,7 @@ int main() {
     GrafoRecorridos grafoRecorridos;
     HashCiudades hashCiudades;
 
-    make(hashCiudades);
+    makeHash(hashCiudades);
     ABBLineas arbolLineas;
     makeABB(arbolLineas);
     crearGrafoRecorridos(grafoRecorridos);
@@ -47,9 +47,9 @@ int main() {
                 break;
             case BUSCAR_RECORRIDOS:
                 printLinea();
-                printf("Ingrese los codigos ciudad para buscar recorrido\n");
+                printf("Buscar Recorrido entre Ciudades\n");
                 printLinea();
-                buscarRecorrido(grafoRecorridos);
+                buscarRecorrido(grafoRecorridos, hashCiudades);
                 opcion = NINGUNA;
                 printLinea();
                 break;
@@ -59,7 +59,6 @@ int main() {
                 printLinea();
                 agregarLinea(arbolLineas, hashCiudades);
                 opcion = NINGUNA;
-                printf("LINEA INGRESADA CORRECTAMENTE\n");
                 printLinea();
                 break;
             case LISTAR_LINEAS:
@@ -75,16 +74,15 @@ int main() {
                 printLinea();
                 printf("Registro de Parada\n");
                 printLinea();
-                registrarParada(grafoRecorridos, arbolLineas);
+                registrarParada(arbolLineas, hashCiudades);
                 opcion = NINGUNA;
-                printf("PARADA REGISTRADA CORRECTAMENTE\n");
                 printLinea();
                 break;
             case LISTAR_PARADAS:
                 printLinea();
-                printf("Ingresar linea para listar sus paradas\n");
+                printf("Listado de paradas\n");
                 printLinea();
-                listarParadas(arbolLineas);
+                listarParadas(arbolLineas, hashCiudades);
                 opcion = NINGUNA;
                 printLinea();
                 break;

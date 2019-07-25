@@ -17,10 +17,12 @@ typedef struct{
     int codigo;
 } Ciudad;
 
-void cargarDatosCiudad(Ciudad &ciudad, int indice);
+void cargarDatosCiudad(Ciudad &ciudad, String nombre, int indice);
+
 void mostrarDatosCiudad(Ciudad ciudad);
 
-int DarCodigo(Ciudad c);
-String DarNombre(Ciudad c);
+int DarCodigo(Ciudad ciudad);
+
+void DarNombre(Ciudad ciudad, String &nombre);
 
 #endif /* Ciudad_h */

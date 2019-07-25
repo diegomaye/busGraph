@@ -23,12 +23,14 @@ typedef NodoLinea * ABBLineas;
 
 void makeABB(ABBLineas &arbolLineas);
 
+Linea findABB(ABBLineas arbolLineas, String codigo);
+
 void insertABB(ABBLineas &arbolLineas, Linea linea);
 
-Boolean memberABB(ABBLineas arbolLineas,String codigo);
+Boolean memberABB(ABBLineas arbolLineas, String codigo);
 
 void listarABB(ABBLineas arbolLineas);
 
-void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, int ciudad);
+void cargarDatosArbolLineas(ABBLineas &arbolLineas, String parada, String ciudad);
 
 #endif /* ABBLineas_h */

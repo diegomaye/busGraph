@@ -9,23 +9,23 @@
 
 #include "HashCiudades.h"
 
-void make(HashCiudades &ciudades){
+void makeHash(HashCiudades &ciudades){
     int i;
     for (i=0; i<CANT_CIUDADES; i++)
         crearLista(ciudades[i]);
 }
 
-void crearLista(lista ciudades){
+void crearLista(lista &ciudades){
     ciudades = NULL;
 }
 
-Boolean member(HashCiudades ciudades, String clave) {
+Boolean memberHash(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
-    if(ciudades[cubeta] == NULL){
-        return FALSE;
+    if(ciudades[cubeta] != NULL && ciudades[cubeta] -> info.nombre != NULL){
+        return perteneceLista(ciudades[cubeta], clave);
     }
     else{
-        return perteneceLista(ciudades[cubeta], clave);
+        return FALSE;
     }
 }
 
@@ -35,8 +35,10 @@ Boolean perteneceLista(lista cubeta, String clave){
     }
     else {
         Ciudad ciudad = cubeta -> info;
-        String claveCiudad = DarNombre(ciudad);
-        if(strreq(claveCiudad, clave)){
+        String claveCiudad;
+        strcrear(claveCiudad);
+        DarNombre(ciudad, claveCiudad);
+        if(streq(claveCiudad, clave)){
             return TRUE;
         }
         else if(cubeta -> sig == NULL){
@@ -49,15 +51,17 @@ Boolean perteneceLista(lista cubeta, String clave){
 }
 
 /*PRECONDICION: La ciudad se enceuntra en el Hash (evaluar previamente con member)*/
-Ciudad find(HashCiudades ciudades, String clave) {
+Ciudad findHash(HashCiudades ciudades, String clave) {
     int cubeta = h(clave);
     return buscarLista(ciudades[cubeta], clave);
 }
 
 Ciudad buscarLista(lista cubeta, String clave){
     Ciudad ciudad = cubeta -> info;
-    String claveCiudad = DarNombre(ciudad);
-    if(strreq(claveCiudad, clave)){
+    String claveCiudad;
+    strcrear(claveCiudad);
+    DarNombre(ciudad, claveCiudad);
+    if(streq(claveCiudad, clave)){
         return ciudad;
     }
     else {
@@ -66,7 +70,9 @@ Ciudad buscarLista(lista cubeta, String clave){
 }
 
 void insert(HashCiudades &ciudades, Ciudad ciudad) {
-    String nombre = DarNombre(ciudad);
+    String nombre;
+    strcrear(nombre);
+    DarNombre(ciudad, nombre);
     int cubeta = h(nombre);
     insFront(ciudades[cubeta], ciudad);
 }
@@ -91,6 +97,19 @@ int h(String clave){
 
 void cargarDatosCiudadEnHash(HashCiudades &ciudades, int indice){
     Ciudad ciudad;
-    cargarDatosCiudad(ciudad, indice);
+    String nombre;
+    strcrear(nombre);
+    Boolean esta = FALSE;
+    do{
+        printf("Nombre Ciudad:");
+        scan(nombre);
+        esta = memberHash(ciudades, nombre);
+        if(esta == TRUE){
+            printf("ERROR: ya existe una ciudad con este nombre:");
+            print(nombre);
+            printEnter();
+        }
+    } while (esta == TRUE);
+    cargarDatosCiudad(ciudad, nombre, indice);
     insert(ciudades, ciudad);
 }

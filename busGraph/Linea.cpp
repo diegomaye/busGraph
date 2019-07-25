@@ -8,10 +8,15 @@
 
 #include "Linea.h"
 
-void cargarDatosLinea(Linea &linea, String parada, int ciudad){
+void cargarDatosLinea(Linea &linea, String parada, String ciudad){
+    strcrear(linea.codigoLinea);
     linea.codigoLinea = parada;
-    linea.codigoOrigen = ciudad;
-    linea.codigoDestino = ciudad;
+    strcrear(linea.ciudadOrigen);
+    strcop(linea.ciudadOrigen, ciudad);
+    strcrear(linea.ciudadDestino);
+    strcop(linea.ciudadDestino, ciudad);
+    crearLPPFParadas(linea.paradas);
+    linea.cantidadParadas = 1;
 }
 
 void DarCodigoLinea(Linea linea, String &nombre){
@@ -20,8 +25,21 @@ void DarCodigoLinea(Linea linea, String &nombre){
 
 void mostrarDatosLinea(Linea linea)
 {
-    printf("El codigo de linea es: \n");
+    printf("El codigo de linea es:");
     print(linea.codigoLinea);
-    printf("La ciudad de origen es:%d\n",linea.codigoOrigen);
-    printf("La ciudad de destino es destino es:%d\n",linea.codigoDestino);
+    printEnter();
+    printf("La ciudad de origen es:");
+    print(linea.ciudadOrigen);
+    printEnter();
+    printf("La ciudad de destino es destino es:");
+    print(linea.ciudadDestino);
+    printEnter();
+    printf("Cantidad de paradas:%d", linea.cantidadParadas);
+    printEnter();
+}
+
+void instertarParada(Linea &linea, Parada parada){
+    linea.ciudadDestino = parada.nombreCiudad;
+    linea.cantidadParadas++;
+    insertarLPPFParada(linea.paradas, parada);
 }
