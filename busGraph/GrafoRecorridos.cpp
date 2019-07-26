@@ -77,6 +77,7 @@ void DFS(GrafoRecorridos grafoRecorridos, int ciudadActual, int ciudadDestino, B
         }
         else
             existe=FALSE;
+        i++;
     }
 }
 
