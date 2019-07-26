@@ -9,7 +9,6 @@
 #include "Parada.h"
 
 void cargarDatosParada(Parada &p, int numeroParada, String nombreCiudad){
-    
     p.numeroParada = numeroParada;
     p.nombreCiudad = nombreCiudad;
 }

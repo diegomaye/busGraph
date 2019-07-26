@@ -74,7 +74,7 @@ int main() {
                 printLinea();
                 printf("Registro de Parada\n");
                 printLinea();
-                registrarParada(arbolLineas, hashCiudades);
+                registrarParada(arbolLineas, grafoRecorridos, hashCiudades);
                 opcion = NINGUNA;
                 printLinea();
                 break;

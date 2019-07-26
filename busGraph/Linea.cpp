@@ -38,8 +38,10 @@ void mostrarDatosLinea(Linea linea)
     printEnter();
 }
 
-void instertarParada(Linea &linea, Parada parada){
-    linea.ciudadDestino = parada.nombreCiudad;
+void instertarParada(Linea &linea, String nombreParada){
+    Parada parada;
+    cargarDatosParada(parada, linea.cantidadParadas, nombreParada);
+    linea.ciudadDestino = nombreParada;
     linea.cantidadParadas = linea.cantidadParadas + 1;
     insertarLPPFParada(linea.paradas, parada);
 }

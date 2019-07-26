@@ -22,7 +22,7 @@ typedef struct{
 
 void cargarDatosLinea(Linea &linea, String parada, String ciudad);
 void mostrarDatosLinea(Linea linea);
-void instertarParada(Linea &linea, Parada parada);
+void instertarParada(Linea &linea, String nombreParada);
 
 void DarCodigoLinea(Linea linea, String &nombre);
 

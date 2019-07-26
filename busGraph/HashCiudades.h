@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include "Ciudad.h"
 
-const int CANT_CIUDADES = 5;
+const int CANT_CIUDADES = 3;
 
 typedef struct nodoL{
     Ciudad info;

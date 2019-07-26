@@ -105,7 +105,7 @@ void listarLineas(ABBLineas arbolLineas){
     listarABB(arbolLineas);
 }
 
-void registrarParada(ABBLineas &arbolLineas, HashCiudades ciudades){
+void registrarParada(ABBLineas &arbolLineas, GrafoRecorridos grafoRecorridos, HashCiudades ciudades){
     String codigoLinea;
     strcrear(codigoLinea);
     
@@ -127,16 +127,21 @@ void registrarParada(ABBLineas &arbolLineas, HashCiudades ciudades){
         else
         {
             Linea linea = findABB(arbolLineas, codigoLinea);
-            int numeroParada = 0;
-            Parada instanciaParada;
             Ciudad ciudad = findHash(ciudades, parada);
             String nombreCiudad;
             strcrear(nombreCiudad);
             DarNombre(ciudad, nombreCiudad);
-            cargarDatosParada(instanciaParada, numeroParada, nombreCiudad);
-            instertarParada(linea, instanciaParada);
-            insertABB(arbolLineas, linea);
-            printf("PARADA REGISTRADA CORRECTAMENTE\n");
+            int codigoOrigen = DarCodigo(findHash(ciudades, linea.ciudadDestino));
+            int codigoDestino = DarCodigo(ciudad);
+            if(existeTramo(grafoRecorridos, codigoOrigen, codigoDestino) == FALSE){
+                printf("ERROR: No existe ruta entre la ultima parada de la linea y la linea a agregar\n");
+            }
+            else {
+                instertarParada(linea, nombreCiudad);
+                insertABB(arbolLineas, linea);
+                printf("PARADA REGISTRADA CORRECTAMENTE\n");
+            }
+            
         }
     }
     

@@ -36,7 +36,7 @@ void buscarRecorrido(GrafoRecorridos &grafoRecorridos, HashCiudades ciudades);
 
 void listarLineas(ABBLineas arbolLineas);
 
-void registrarParada(ABBLineas &arbolLineas, HashCiudades ciudades);
+void registrarParada(ABBLineas &arbolLineas, GrafoRecorridos grafoRecorridos, HashCiudades ciudades);
 
 void listarParadas(ABBLineas arbolLineas, HashCiudades ciudades);
 
