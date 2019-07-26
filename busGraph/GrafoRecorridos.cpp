@@ -58,7 +58,7 @@ void cargarDatosAristaEnGrafo(GrafoRecorridos &grafoRecorridos, HashCiudades ciu
 }
 
 Boolean existeTramo(GrafoRecorridos grafoRecorridos, int ciudadOrigen, int ciudadDestino){
-    Boolean existe=FALSE;
+    Boolean existe;
     Boolean visitado[CANT_CIUDADES];
     for(int i=0; i<CANT_CIUDADES; i++){
         visitado[i]=FALSE;
@@ -70,13 +70,17 @@ Boolean existeTramo(GrafoRecorridos grafoRecorridos, int ciudadOrigen, int ciuda
 void DFS(GrafoRecorridos grafoRecorridos, int ciudadActual, int ciudadDestino, Boolean visitado[CANT_CIUDADES], Boolean &existe){
     int i=0;
     visitado[ciudadActual]=TRUE;
+    existe=TRUE;
     while(i<CANT_CIUDADES && !visitado[ciudadDestino]){
         if(grafoRecorridos[ciudadActual][i] == 1) {
             if(!visitado[i])
                 DFS(grafoRecorridos, i, ciudadDestino, visitado, existe);
         }
         else
+        {
             existe=FALSE;
+        }
+
         i++;
     }
 }
